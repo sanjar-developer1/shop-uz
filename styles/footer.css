@@ -1,0 +1,328 @@
+footer {
+  padding: calc(39 / 13.6 * 1vw) calc(42 / 13.6 * 1vw);
+  background: linear-gradient(96.78deg, #f64d4d -57.09%, #4d5ef6 101.17%);
+  display: grid;
+  grid-template-areas:
+    "card1 card2 card3 card4"
+    "card5 card5 card5 card5";
+  grid-template-columns: 1fr, 4;
+  row-gap: calc(21 / 13.6 * 1vw);
+}
+
+footer > div:first-child {
+  grid-area: card1;
+}
+
+footer > div:nth-child(2) {
+  grid-area: card2;
+}
+
+footer > div:nth-child(3) {
+  grid-area: card3;
+}
+
+footer > div:nth-child(4) {
+  grid-area: card4;
+}
+
+footer > div:nth-child(5) {
+  grid-area: card5;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  padding: calc(5 / 13.6 * 1vw);
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: calc(5 / 13.6 * 1vw);
+  align-items: start;
+}
+
+.cardFooter > h1 {
+  font-family: Roboto, sans-serif;
+  font-size: calc(16 / 13.6 * 1vw);
+  font-weight: 500;
+  line-height: calc(19 / 13.6 * 1vw);
+  color: white;
+}
+
+.cardFooter > p {
+  font-family: Roboto, sans-serif;
+  font-size: calc(14 / 13.6 * 1vw);
+  font-weight: 400;
+  line-height: calc(27 / 13.6 * 1vw);
+  color: white;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: calc(22 / 13.6 * 1vw);
+}
+
+.email1 {
+  display: flex;
+  flex-direction: column;
+  gap: calc(23 / 13.6 * 1vw);
+}
+
+.email1 > p {
+  font-family: Roboto, sans-serif;
+  font-size: calc(14 / 13.6 * 1vw);
+  font-weight: 400;
+  line-height: calc(16 / 13.6 * 1vw);
+  color: white;
+}
+
+.email1 > div:nth-child(2) {
+  display: flex;
+  gap: calc(15 / 13.6 * 1vw);
+  height: calc(35 / 13.6 * 1vw);
+}
+
+.email1 > div > input {
+  width: calc(260 / 13.6 * 1vw);
+  height: 100%;
+  border: calc(1 / 13.6 * 1vw) solid white;
+  background-color: inherit;
+  padding: calc(9.5 / 13.6 * 1vw) calc(24 / 13.6 * 1vw);
+  font-size: calc(14 / 13.6 * 1vw);
+  line-height: calc(16 / 13.6 * 1vw);
+  font-style: italic;
+  outline: none;
+  color: white;
+}
+
+.email1 > div > input::placeholder {
+  font-family: Roboto, sans-serif;
+  font-size: calc(14 / 13.6 * 1vw);
+  font-style: italic;
+  font-weight: 300;
+  line-height: calc(16 / 13.6 * 1vw);
+  text-align: left;
+  color: white;
+}
+
+.email1 > div > button {
+  width: calc(130 / 13.6 * 1vw);
+  height: 100%;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email1 > div > button > a {
+  font-family: Roboto, sans-serif;
+  font-size: calc(14 / 13.6 * 1vw);
+  font-weight: 400;
+  line-height: calc(16 / 13.6 * 1vw);
+  background: linear-gradient(96.78deg, #f64d4d -57.09%, #4d5ef6 101.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.email2 {
+  display: flex;
+  flex-direction: column;
+  gap: calc(20 / 13.6 * 1vw);
+}
+
+.email2 > h1 {
+  font-family: Roboto, sans-serif;
+  font-size: calc(16 / 13.6 * 1vw);
+  font-weight: 500;
+  line-height: calc(19 / 13.6 * 1vw);
+  color: white;
+}
+
+.email2 > div:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: calc(32 / 13.6 * 1vw);
+}
+
+.email2 > div:last-child > img {
+  width: calc(25 / 13.6 * 1vw);
+  height: calc(25 / 13.6 * 1vw);
+}
+
+footer > div:last-child > img {
+  width: calc(251 / 13.6 * 1vw);
+  height: calc(65 / 13.6 * 1vw);
+}
+
+footer > div:last-child > p {
+  font-family: Roboto, sans-serif;
+  font-size: calc(12 / 13.6 * 1vw);
+  font-weight: 400;
+  line-height: calc(14 / 13.6 * 1vw);
+  text-align: left;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    background: linear-gradient(96.78deg, #f64d4d -57.09%, #4d5ef6 101.17%);
+    display: grid;
+    grid-template-areas:
+      "card1 card3 card2"
+      "card4 card4 card5"
+      "card6 card6 card6";
+    grid-template-columns: 1fr, 3;
+    row-gap: calc(21 / 7.68 * 1vw);
+  }
+
+  footer > div:first-child {
+    grid-area: card1;
+  }
+
+  footer > div:nth-child(2) {
+    grid-area: card2;
+  }
+
+  footer > div:nth-child(3) {
+    grid-area: card3;
+  }
+
+  footer > div:nth-child(4) {
+    grid-area: card4;
+  }
+
+  footer > div:nth-child(5) {
+    grid-area: card5;
+  }
+
+  footer > div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cardFooter {
+    display: flex;
+    flex-direction: column;
+    gap: calc(5 / 7.68 * 1vw);
+    justify-content: start;
+  }
+
+  .cardFooter > h1 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(16 / 7.68 * 1vw);
+    font-weight: 500;
+    line-height: calc(19 / 7.68 * 1vw);
+    color: white;
+  }
+
+  .cardFooter > p {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14 / 7.68 * 1vw);
+    font-weight: 400;
+    line-height: calc(27 / 7.68 * 1vw);
+    color: white;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .email1 > p {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14 / 7.68 * 1vw);
+    font-weight: 400;
+    line-height: calc(16 / 7.68 * 1vw);
+    color: white;
+  }
+
+  .email1 > div:nth-child(2) {
+    display: flex;
+    gap: calc(15 / 7.68 * 1vw);
+    height: calc(35 / 7.68 * 1vw);
+  }
+
+  .email1 > div > input {
+    width: calc(260 / 7.68 * 1vw);
+    height: 100%;
+    border: calc(1 / 7.68 * 1vw) solid white;
+    background-color: inherit;
+    padding: calc(9.5 / 7.68 * 1vw) calc(24 / 7.68 * 1vw);
+    font-size: calc(14 / 7.68 * 1vw);
+    line-height: calc(16 / 7.68 * 1vw);
+    font-style: italic;
+  }
+
+  .email1 > div > input::placeholder {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14 / 7.68 * 1vw);
+    font-style: italic;
+    font-weight: 300;
+    line-height: calc(16 / 7.68 * 1vw);
+    text-align: left;
+    color: white;
+  }
+
+  .email1 > div > button {
+    width: calc(130 / 7.68 * 1vw);
+    height: 100%;
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .email1 > div > button > a {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14 / 7.68 * 1vw);
+    font-weight: 400;
+    line-height: calc(16 / 7.68 * 1vw);
+    background: linear-gradient(96.78deg, #f64d4d -57.09%, #4d5ef6 101.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .email2 > h1 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(16 / 7.68 * 1vw);
+    font-weight: 500;
+    line-height: calc(19 / 7.68 * 1vw);
+    color: white;
+  }
+
+  .email2 > div:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: calc(32 / 7.68 * 1vw);
+  }
+
+  .email2 > div:last-child > img {
+    width: calc(25 / 7.68 * 1vw);
+    height: calc(25 / 7.68 * 1vw);
+  }
+
+  footer > div:last-child {
+    display: flex;
+    grid-area: card6;
+    align-items: center;
+  }
+
+  footer > div:last-child > img {
+    width: calc(251 / 7.68 * 1vw);
+    height: calc(65 / 7.68 * 1vw);
+  }
+
+  footer > div:last-child > p {
+    font-family: Roboto, sans-serif;
+    font-size: calc(12 / 7.68 * 1vw);
+    font-weight: 400;
+    line-height: calc(14 / 7.68 * 1vw);
+    text-align: left;
+    color: white;
+  }
+}

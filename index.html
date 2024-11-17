@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/hurryup.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Amaliyot</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="headerUp">
+        <div class="headerUpLeft">
+          <div>
+            Покупателям
+            <img src="img/down .svg" alt="" />
+          </div>
+          <div>
+            Поставщикам
+            <img src="img/down .svg" alt="" />
+          </div>
+          <div>Частые вопросы</div>
+        </div>
+        <div class="headerUpRight">
+          <img src="img/russian flag.svg" alt="russioan" />
+          <span></span>
+          <p>Русский</p>
+          <span></span>
+          <p>₽</p>
+          <img src="img/down .svg" alt="downside" />
+        </div>
+      </div>
+      <div class="headerBottom">
+        <button class="burgerHeader remove" id="burgerHeader">
+          <i class="fa-solid fa-bars" id="menu"></i>
+          <i class="fa-solid fa-xmark" id="xmark"></i>
+        </button>
+        <img src="img/logo.png" alt="logo" />
+        <div class="searched-products">
+          <h1 class="searcher-title">Товары</h1>
+          <div class="searched-results"></div>
+        </div>
+        <form action="">
+          <button class="vezdeHeading">
+            <p>Везде</p>
+            <img src="img/down .svg" alt="down" />
+          </button>
+          <input type="text" class="searchHeading" id="searchProduct" />
+          <button class="searchBtn" id="searchBtn">
+            <img src="img/searchBtn.svg" alt="search" />
+          </button>
+        </form>
+        <div class="iconsHeading">
+          <a href="./admin.html" class="iconHeading">
+            <img src="img/user.svg" alt="user" />
+            <p>Войти</p>
+          </a>
+          <a class="iconHeading">
+            <img src="img/like-heart.svg" alt="user" />
+            <p>Избранное</p>
+            <span id="countLike"></span>
+          </a>
+          <a class="iconHeading">
+            <img src="img/shop-cart.svg" alt="user" />
+            <p>Корзина</p>
+          </a>
+        </div>
+      </div>
+      <div class="catalog">
+        <div class="catalogCard" id="catalogCard">
+          <button onclick="array('popular')">
+            <img src="img/catalog1.svg" alt="catalog" />
+            <p>Популярные категории</p>
+          </button>
+          <button onclick="array('laptop')">
+            <img src="img/catalog2.svg" alt="catalog" />
+            <p>Компьютеры и оргтехника</p>
+          </button>
+          <button onclick="array('smartphone')">
+            <img src="img/catalog3.svg" alt="catalog" />
+            <p>Электроника</p>
+          </button>
+          <button onclick="array('household')">
+            <img src="img/catalog4.svg" alt="catalog" />
+            <p>Бытовая техника</p>
+          </button>
+          <button onclick="array('clotheWomen')">
+            <img src="img/catalog5.svg" alt="catalog" />
+            <p>Одежда для женщин</p>
+          </button>
+          <button onclick="array('clotheMen')">
+            <img src="img/catalog6.svg" alt="catalog" />
+            <p>Одежда для мужчин</p>
+          </button>
+          <button onclick="array('children')">
+            <img src="img/catalog7.svg" alt="catalog" />
+            <p>Все для детей</p>
+          </button>
+          <button onclick="array('car')">
+            <img src="img/catalog8.svg" alt="catalog" />
+            <p>Автотовары</p>
+          </button>
+          <button onclick="array('health')">
+            <img src="img/catalog9.svg" alt="catalog" />
+            <p>Красота и здоровье</p>
+          </button>
+          <button onclick="array('sport')">
+            <img src="img/catalog10.svg" alt="catalog" />
+            <p>Спорт и развлечения</p>
+          </button>
+          <button class="allCatalog" onclick="all()">
+            <p>Все категории</p>
+            <img src="img/arrow down purple.svg" alt="arrow" />
+          </button>
+          <button class="showButton">
+            <img src="img/diamond 1.svg" alt="diamond" />
+            <h1>Premium</h1>
+          </button>
+          <button class="showButton">
+            <img src="img/discount (1) 1.svg" alt="discount" />
+            <h1>Уцененные товары</h1>
+          </button>
+        </div>
+        <div class="catalogDiscount" id="catalogDiscount">
+          <img src="img/baner1.png" alt="banner" />
+          <button>
+            <img src="img/arrow left banner.svg" alt="left" />
+          </button>
+          <button>
+            <img src="img/arrow right banner.svg" alt="right" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- header end -->
+
+    <!-- main start -->
+
+    <main class="main">
+      <div class="section">
+        <h1>Успей купить</h1>
+        <div class="wrapper" id="wrapper"></div>
+        <div class="wrapper1" id="wrapper1"></div>
+      </div>
+    </main>
+
+    <!-- main end -->
+
+    <!-- footer start -->
+
+    <footer class="footer">
+      <div class="cardFooter">
+        <h1>Покупателям</h1>
+        <p>Как это работает</p>
+        <p>Защита покупателя</p>
+        <p>Условия оплаты</p>
+        <p>Условия использования</p>
+        <p>Регистрация аккаунта</p>
+      </div>
+      <div class="cardFooter">
+        <h1>Поставщикам</h1>
+        <p>Как стать продавцом</p>
+        <p>Правила участия</p>
+        <p>Личный кабинет продавца</p>
+      </div>
+      <div class="cardFooter">
+        <h1>О компании</h1>
+        <p>О PlaceMik</p>
+        <p>Новости</p>
+        <p>Часто задаваемые вопросы</p>
+        <p>Служба поддержки</p>
+        <p>Сообщить о нарушении авторских прав</p>
+      </div>
+      <div class="email">
+        <div class="email1">
+          <p>Хотите быть в курсе последних новостей и акций?</p>
+          <div>
+            <input
+              type="email"
+              placeholder="konstantinkonstantinov@yandex.ru"
+            />
+            <button>
+              <a href="#">Подписаться</a>
+            </button>
+          </div>
+        </div>
+        <div class="email2">
+          <h1>Мы в соцсетях</h1>
+          <div>
+            <img src="img/vk-brands.svg" alt="vk" />
+            <img src="img/instagram.svg" alt="instagram" />
+            <img src="img/facebook-f-brands.svg" alt="facebook-f-brands" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="img/logo white .png" alt="logo" />
+        <p>© PlaceMik.ru, 2021</p>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+    <script src="app.js"></script>
+  </body>
+</html>
