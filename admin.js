@@ -1,54 +1,35 @@
-const productAdd = document.querySelector("#productList");
-const productCategory = document.querySelector("#productCategory");
-const productPrice = document.getElementById("productPrice");
-const productDescription = document.getElementById("productDescription");
-const productImage = document.getElementById("productImage");
-const productTitle = document.getElementById("productTitle");
-const submitBtn = document.querySelector(".add-product");
+document.getElementById("productForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Sahifa yangilanmasin
 
-const product = {
-  title: productTitle,
-  price: productPrice,
-  productCategory: productCategory,
-  img: productImage,
-};
+  const product = {
+    title: document.getElementById("productTitle").value,
+    image: document.getElementById("productImage").value,
+    description: document.getElementById("productDescription").value,
+    price: parseFloat(document.getElementById("productPrice").value),
+    category: document.getElementById("productCategory").value,
+  };
 
-function addCard() {
-  let arr = JSON.parse(localStorage.getItem("addedProducts")) || [];
+  fetch("http://localhost:3000/api/products", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(product),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      alert("Mahsulot qo‘shildi!");
+      document.getElementById("productForm").reset(); // Formani tozalash
+    })
+    .catch((err) => console.error("Xatolik:", err));
+});
 
-  arr.push({
-    title: productTitle,
-    price: productPrice,
-    productCategory: productCategory,
-    img: productImage,
-  });
 
-  localStorage.setItem("addedProducts", JSON.stringify(arr));
-}
 
-const basketItemsContainer = document.querySelector(".basket-items");
+// home ga qaytish
 
-// Render Basket Items
-function renderBasket() {
-  const itemDiv = document.createElement("div");
-  itemDiv.className = "basket-item";
-  productAdd.innerHTML = `
-     <div>
-      <img src="./images/samsungs10.webp" alt="rasm bor">
-      <div class="details">
-        <h4>Samsung 10s</h4>
-        <p>Price: $980</p>
-      </div>
-      <div class="quantity-controls">
-        <button class="decrement">-</button>
-        <span>2</span>
-        <button class="increment">+</button>
-      </div>
-      <div class="price">$1960</div>
-     </div>
-    `;
+const homega = document.querySelector("#home-btn")
 
-  basketItemsContainer.appendChild(itemDiv);
-}
-
-renderBasket();
+homega.addEventListener("click", () => {
+  window.location.href = "index.html";
+})

@@ -13,6 +13,7 @@ header {
   gap: calc(19 / 13.6 * 1vw);
   padding-right: calc(44 / 13.6 * 1vw);
   background-color: #f7f7f7;
+
 }
 
 a {
@@ -22,6 +23,7 @@ a {
 main {
   padding-left: calc(43 / 13.6 * 1vw);
   padding-right: calc(43 / 13.6 * 1vw);
+  padding-bottom: calc(20/13.6*1vw);
   background-color: #f7f7f7;
   padding-top: calc(30 / 13.6 * 1vw);
 }
@@ -30,5 +32,8 @@ main {
   header {
     padding-right: calc(15 / 7.68 * 1vw);
     padding-left: calc(15 / 7.68 * 1vw);
+  }
+  .burgerHeader {
+    display: none;
   }
 }

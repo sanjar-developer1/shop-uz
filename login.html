@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Login</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(120deg, #2980b9, #8e44ad);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #loginForm {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        font-size: 32px;
+    }
+
+    #loginForm input {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    #loginForm button {
+        padding: 10px;
+        background: #2980b9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #loginForm button:hover {
+        background: #216f9c;
+    }
+</style>
+
+<body>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Foydalanuvchi nomi" required />
+        <input type="password" id="password" placeholder="Parol" required />
+        <button type="submit">Kirish</button>
+    </form>
+
+    <div id="adminPanel" style="display: none;">
+        <h2>Admin Panel</h2>
+        <p>Bu yerda admin ishlaydi</p>
+        <!-- Bu yerga mahsulot qo‘shish yoki o‘chirish form qo‘shish mumkin -->
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "sanjar" && password === "adminsanjar") {
+                // Kirish muvaffaqiyatli bo'lsa, admin.html sahifasiga yo'naltiriladi
+                alert("Xush kelibsiz, admin!");
+                window.location.href = "admin.html";
+            } else {
+                alert("Login yoki parol noto‘g‘ri");
+            }
+        });
+    </script>
+</body>
+
+</html>

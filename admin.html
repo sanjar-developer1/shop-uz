@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/admin.css" />
-    <title>Add to card</title>
-  </head>
-  <body>
-    <div class="wrapper-box">
-      <div class="container">
-        <h1>Admin Product Management</h1>
-        <!-- Product Form -->
-        <form id="productForm">
-          <input
-            type="text"
-            id="productTitle"
-            placeholder="Product Title"
-            required
-          />
-          <input
-            type="text"
-            id="productImage"
-            placeholder="Image URL"
-            required
-          />
-          <textarea
-            id="productDescription"
-            placeholder="Description"
-            required
-          ></textarea>
-          <input type="number" id="productPrice" placeholder="Price" required />
 
-          <!-- Category Select -->
-          <select id="productCategory" required>
-            <option value="" disabled selected>Select Category</option>
-            <option value="electronics">Electronics</option>
-            <option value="laptops">Laptops</option>
-            <option value="phones">Phones</option>
-          </select>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/admin.css" />
+  <title>Admin Panel</title>
+</head>
 
-          <button class="add-product" type="submit" onclick="addCard()">
-            Add Product
-          </button>
-        </form>
+<body>
+  <div class="container">
 
-        <!-- Product List -->
-        <h2>Product List</h2>
-        <div id="productList" class="product-list"></div>
-      </div>
+    <div class="container-top">
+      <h1>Admin Product Management</h1>
+      <button class="clear-btn" id="home-btn">🏠QAYTISH</button>
     </div>
-    <script src="admin.js"></script>
-  </body>
+    <form id="productForm">
+      <input type="text" id="productTitle" placeholder="Product Title" required />
+      <input type="text" id="productImage" placeholder="Image URL" required />
+      <textarea maxlength="30" id="productDescription" placeholder="Description" required></textarea>
+      <input type="number" id="productPrice" placeholder="Price" required />
+      <select id="productCategory" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="electronics">Electronika</option>
+        <option value="phones">Telefon</option>
+        <option value="kompyuter">Kompyuter</option>
+        <option value="meva">Meva</option>
+        <option value="Kiyim">Kiyim</option>
+
+      </select>
+      <button class="add-product" type="submit">Add Product</button>
+    </form>
+  </div>
+  <script src="admin.js"></script>
+</body>
+
 </html>
