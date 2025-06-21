@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/hurryup.css" />
   <link rel="stylesheet" href="styles/footer.css" />
-  <link rel="stylesheet" href="styles/media.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,7 +32,7 @@
         <h1 class="searcher-title">Maxsulot</h1>
         <div class="searched-results"></div>
       </div>
-      <form action="">
+      <form id="form" action="">
         <button class="vezdeHeading">
           <p>Qidirish</p>
         </button>
@@ -72,6 +71,10 @@
         <button onclick="filterCategory('kompyuter')">
           <img src="img/catalog2.svg" alt="catalog" />
           <p>Kompyuterlar</p>
+        </button>
+        <button onclick="filterCategory('Aksessuarlar')">
+          <img src="img/catalog2.svg" alt="catalog" />
+          <p>Aksessuarlar</p>
         </button>
         <button onclick="filterCategory('Kiyim')">
           <img src="img/catalog5.svg" alt="catalog" />

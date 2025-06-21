@@ -19,7 +19,12 @@ function allProducts(products) {
                 <p><span>${product.price.toLocaleString("ru-RU")} so'm</span></p>
                 <p>${product.title}</p>
                 <p>${product.description}</p>
-                <button class="buyBtn">Savatga</button>
+                <button 
+                  class="buyBtn" 
+                  onclick="addToBasketFromButton(this)" 
+                  data-product='${JSON.stringify(product)}'>
+                  Savatga
+                </button>
               </div>
             </div>
           </div>
@@ -74,3 +79,6 @@ function goToAdminPage() {
   window.location.href = "login.html";
 }
 
+
+let test = [1, 2, 3];
+localStorage.setItem("salom", JSON.stringify(test));

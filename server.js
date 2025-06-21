@@ -9,13 +9,15 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// GET - Barcha mahsulotlar
 app.get("/api/products", (req, res) => {
-    const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
-    res.json(data.products);
+    try {
+        const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
+        res.json(data.products);
+    } catch (error) {
+        console.error("Xatolik:", error.message);
+        res.status(500).json({ error: "Mahsulotlarni o‘qishda xatolik yuz berdi." });
+    }
 });
-
-// POST - Yangi mahsulot
 app.post("/api/products", (req, res) => {
     const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
     const newProduct = {
@@ -31,7 +33,6 @@ app.post("/api/products", (req, res) => {
     res.status(201).json({ message: "Mahsulot qo‘shildi", product: newProduct });
 });
 
-// PUT - Tahrirlash
 app.put("/api/products/:id", (req, res) => {
     const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
     const id = parseInt(req.params.id);
@@ -45,7 +46,6 @@ app.put("/api/products/:id", (req, res) => {
     }
 });
 
-// DELETE - O‘chirish
 app.delete("/api/products/:id", (req, res) => {
     const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
     const id = parseInt(req.params.id);
@@ -62,3 +62,49 @@ app.delete("/api/products/:id", (req, res) => {
 app.listen(PORT, () => {
     console.log(`✅ Server ishga tushdi: http://localhost:${PORT}`);
 });
+
+
+
+// function renderBasket() {
+//   basketItemsContainer.innerHTML = "";
+//   let totalPrice = 0;
+
+//   if (keldi.length === 0) {
+//     basketItemsContainer.innerHTML = "<p>Savat bo‘sh</p>";
+//     basketTotal.textContent = "0 so'm";
+//     return;
+//   }
+
+//   keldi.forEach((item, index) => {
+//     const count = item.count || 1;
+//     const priceUZS = item.price;
+//     const totalUZS = priceUZS * count;
+
+//     const itemDiv = document.createElement("div");
+//     itemDiv.className = "basket-item";
+
+//     itemDiv.innerHTML = `
+//       <div>
+//         <img src="${item.image}" alt="rasm bor">
+//         <div class="details">
+//           <h4>${item.title}</h4>
+//           <p>Narxi: <span>${priceUZS.toLocaleString()} so'm</span></p>
+//         </div>
+//         <div class="mix">
+//           <div class="quantity-controls">
+//             <button onclick="updateCount(${index}, -1)">-</button>
+//             <span id="count-${index}">${count}</span>
+//             <button onclick="updateCount(${index}, 1)">+</button>
+//           </div>
+//           <div class="price" id="price-${index}">${totalUZS.toLocaleString()} so'm</div>
+//         </div>
+//       </div>
+//     `;
+
+//     basketItemsContainer.appendChild(itemDiv);
+//     totalPrice += totalUZS;
+//   });
+
+//   basketTotal.textContent = `${totalPrice.toLocaleString()} so'm`;
+// }
+

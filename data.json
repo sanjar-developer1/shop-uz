@@ -1,6 +1,5 @@
 {
-
-    "users": [
+  "users": [
     {
       "id": 1,
       "username": "sanjar",
@@ -72,6 +71,14 @@
       "price": 89000,
       "description": "Erkaklar yozgi poyabzali",
       "category": "Kiyim"
+    },
+    {
+      "id": 1750495925553,
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTy_YCbEO5h2sz-O3IyicoqDK53F-iRg8SY50T3wCn4iZEmgxtobivaw7_pYFm0v55_85jB391w2TGuUmuC5aHMif54GzDU_nwGb7fKYN3jKKgVlAFkcAJjVNUaF-6tFXj7HSByCg&usqp=CAc",
+      "title": "Rolex Datejust",
+      "price": 275430000,
+      "description": "Kok rangdagi",
+      "category": "Aksessuar"
     }
   ]
 }

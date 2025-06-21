@@ -11,11 +11,21 @@ footer {
   row-gap: calc(21 / 13.6 * 1vw);
 }
 
-footer > div:first-child { grid-area: card1; }
-footer > div:nth-child(2) { grid-area: card2; }
-footer > div:nth-child(3) { grid-area: card3; }
-footer > div:nth-child(4) { grid-area: card4; }
-footer > div:nth-child(5) { grid-area: card5; }
+footer > div:first-child {
+  grid-area: card1;
+}
+footer > div:nth-child(2) {
+  grid-area: card2;
+}
+footer > div:nth-child(3) {
+  grid-area: card3;
+}
+footer > div:nth-child(4) {
+  grid-area: card4;
+}
+footer > div:nth-child(5) {
+  grid-area: card5;
+}
 
 footer > div {
   display: flex;
@@ -83,7 +93,7 @@ footer > div {
   font-style: italic;
   outline: none;
   color: white;
-  border-radius: calc(5/13.6*1vw);
+  border-radius: calc(5 / 13.6 * 1vw);
 }
 
 .email1 > div > input::placeholder {
@@ -104,7 +114,7 @@ footer > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(5/13.6*1vw);
+  border-radius: calc(5 / 13.6 * 1vw);
 }
 
 .email1 > div > button > a {
