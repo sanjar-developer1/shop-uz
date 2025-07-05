@@ -22,10 +22,9 @@ a {
 main {
   padding-left: calc(43 / 13.6 * 1vw);
   padding-right: calc(43 / 13.6 * 1vw);
-  padding-bottom: calc(20 / 13.6 * 1vw);
   background-color: #f7f7f7;
   padding-top: calc(30 / 13.6 * 1vw);
-  padding-bottom: calc(80 / 13.6 * 1vw);
+  padding-bottom: calc(55 / 13.6 * 1vw);
 }
 
 @media only screen and (max-width: 768px) {

@@ -4,7 +4,7 @@
   row-gap: calc(50 / 13.6 * 1vw);
   flex-wrap: wrap;
   margin-top: calc(20 / 13.6 * 1vw);
-  margin-bottom: calc(20/13.6*1vw);
+  margin-bottom: calc(20 / 13.6 * 1vw);
 }
 
 .wrapper1 {
@@ -19,14 +19,13 @@
 
 .card {
   width: calc(190 / 13.6 * 1vw);
-  height: auto;
   background-color: white;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
   transition: all 0.3s linear;
-  border-radius: calc(10/13.6*1vw);
+  border-radius: calc(10 / 13.6 * 1vw);
 }
 
 .cardUp {
@@ -42,10 +41,6 @@
   z-index: 10;
   box-shadow: 0 calc(4 / 14.4 * 1vw) calc(40 / 14.4 * 1vw) 0 #00000038;
   padding-bottom: calc(20 / 13.6 * 1vw);
-}
-
-.cardUp:hover .card {
-  padding-bottom: calc(23 / 13.6 * 1vw);
 }
 
 .cardUp:hover .card {
@@ -72,13 +67,15 @@
   width: 100%;
   height: calc(200 / 13.6 * 1vw);
   border-radius: calc(10 / 13.6 * 1vw);
+  overflow: hidden;
 }
 
-.card-wrapper{
-  padding: calc(5/13.6*1vw);
+.card-wrapper {
+  padding: calc(5 / 13.6 * 1vw);
   display: flex;
   flex-direction: column;
   align-items: left;
+  justify-content: center;
 }
 
 .card-wrapper > p:nth-child(1) > span {
@@ -106,7 +103,6 @@
   color: #000000;
   margin-top: calc(4.75 / 13.6 * 1vw);
 }
-
 
 .cardBlack {
   font-family: Roboto, sans-serif;
@@ -160,7 +156,6 @@
   line-height: calc(33 / 13.6 * 1vw);
 }
 
-
 .buyBtn {
   width: 100%;
   height: calc(34 / 13.6 * 1vw);
@@ -175,7 +170,7 @@
   transition: all 0.2s linear;
   z-index: -10;
   display: none;
-  border-radius: calc(5/13.6*1vw);
+  border-radius: calc(5 / 13.6 * 1vw);
 }
 
 .view {

@@ -3,8 +3,20 @@ fetch("http://localhost:3000/api/products")
   .then((res) => res.json())
   .then((products) => {
     oneProducts = products
-    allProducts(products)
-  }).catch((err) => console.error("Xatolik:", err));
+
+    const main = document.querySelector("main");
+
+    if (products.length === 0) {
+      main.style.paddingBottom = "0";
+    } else {
+      allProducts(products);
+    }
+  }).catch((err) => {
+
+    console.error("Xatolik:", err)
+    document.querySelector("main").style.paddingBottom = "0";
+  }
+  );
 
 
 function allProducts(products) {
