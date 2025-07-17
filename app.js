@@ -85,12 +85,9 @@ searchInput.addEventListener("input", function (event) {
 })
 
 
-// admin kishi uchun
+// admin kirishi uchun
 
 function goToAdminPage() {
   window.location.href = "login.html";
 }
 
-
-let test = [1, 2, 3];
-localStorage.setItem("salom", JSON.stringify(test));
