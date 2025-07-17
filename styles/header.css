@@ -57,7 +57,7 @@ header {
 .headerBottom {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   column-gap: calc(50 / 13.6 * 1vw);
 }
 .headerBottom > button:nth-child(1) {
@@ -65,6 +65,8 @@ header {
 }
 .headerBottom img {
   border-radius: calc(10 / 13.6 * 1vw);
+  height: calc(63 / 13.6 * 1vw);
+  width: calc(250 / 13.6 * 1vw);
 }
 
 .burgerHeader {
